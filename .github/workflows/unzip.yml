@@ -1,0 +1,26 @@
+name: Auto Unzip
+
+on:
+  push:
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unzip files
+        run: |
+          find . -name "*.zip" -exec unzip -o {} -d . \;
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Auto unzip"
+          git push
