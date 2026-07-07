@@ -1,0 +1,16 @@
+# Evolve: Adaptive Priority Engine — Streamlit configuration
+# Native dark theme (does NOT depend on CSS injection, so it always applies).
+
+[theme]
+base = "dark"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#0B0E14"
+textColor = "#E6EDF3"
+primaryColor = "#2F81F7"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false
