@@ -1,0 +1,11 @@
+# Evolve: Adaptive Priority Engine — Python dependencies
+#
+# Core framework
+streamlit>=1.33.0,<2.0
+# Graphviz Python bindings (optional for rendering; st.graphviz_chart also
+# accepts a raw DOT string, so the app works even if the system binary is absent)
+graphviz>=0.20.1
+# Google Gen AI SDK — native client for Google's Gemma / Gemini models.
+# The app degrades gracefully to an offline mock if this is missing or no API
+# key is configured.
+google-genai>=1.0.0
